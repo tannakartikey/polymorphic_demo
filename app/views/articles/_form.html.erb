@@ -24,7 +24,10 @@
   <div class="field">
     <%= form.fields_for :images, @article.images.new do |image_form| %>
       <%= image_form.label :filename %>
-      <%= image_form.text_field :filename %>
+      <%= image_form.file_field :filename %>
+
+      <%= image_form.label :files %>
+      <%= image_form.file_field :files, multiple: true %>
     <% end %>
   </div>
 
